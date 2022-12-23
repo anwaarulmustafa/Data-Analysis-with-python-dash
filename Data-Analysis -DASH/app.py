@@ -596,7 +596,8 @@ try:
         [Input("communication-type", "value")],
     )
     def display_call_properties (input):
-        if input[0] =="call"
+        if input[0] == "call":
+            return
 
     #______Get-data callBack on Filters input
     @app.callback(

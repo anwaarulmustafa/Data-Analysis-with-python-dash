@@ -4,18 +4,11 @@ $(document).ready(function() { //Inicio
     $('#myTable Tbody').on( 'click', 'Tr', function () {
        $(this).toggleClass('selected');
     });
-        
-    //Contar filas seleccionadas
     $('#btnValoresSeleccionados').click(function() {
-       //alert(myTable.rows().data().length+' row(s) selected' );
-      
-      //Recorre las filas de la tabla
         $('#myTable Tbody Tr').each(function(indexFila){
-          //verifica si  la fila seleccionada tiene la clase 'selected'  
           if($(this).hasClass('selected')) { 
 							alert("La fila: "+indexFila+" se ha seleccionado");
 						}
-          //Recorre las columnas de la tabla
           $(this).children('Td').each(function(indexColumna){
             if(indexColumna==3){
               campo1=$(this).text()
@@ -25,15 +18,11 @@ $(document).ready(function() { //Inicio
           
         });//fin de '#myTable tbody tr'
       
-    });//fin (btnSeleccionados)
-    // alert(myTable.rows('.selected').data().length+' row(s) selected' );
-  
-    //Obtener valor de las filas a las que se hace click
-    var myFila= myTable.row( this ).data(); //Obtiene datos de una fila
-    $.each(myFila,function(index, contenido){ //Recorre un array
+    });//Obtiene datos de una fila
+    $.each(myFila,function(index, contenido){ 
        if(index==2){
           alert(contenido);
        };
     }); 
   
-} );//Fin
+} );
