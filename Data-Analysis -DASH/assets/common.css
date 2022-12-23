@@ -1,0 +1,40 @@
+
+.flip-box {
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    /* border: 1px solid white; */
+    perspective: 1000px;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateX(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-color: transparent;
+    color: black;
+  }
+  
+  .flip-box-back {
+    background-color: transparent;
+    color: black;
+    transform: rotateX(180deg);
+  }
